@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/accaunt.min.css" />
+    <title>Accaunt</title>
+  </head>
+  <body class="wrapper">
+    <!-- Navigation -->
+    <section class="navigation">
+      <!-- top-bar -->
+      <div class="top-bar">
+        <div class="top-bar_left">
+          <div class="top-bar_item top-bar__location">
+            <i class="fas fa-location-arrow"></i>
+            <p>г. Пенза ул. Московская 85а</p>
+          </div>
+          <div class="top-bar_item top-bar_mail">
+            <i class="far fa-envelope"></i>
+            <p>support@furnihome.com</p>
+          </div>
+          <div class="top-bar_item top-bar__phone">
+            <i class="fas fa-phone-alt"></i>
+            <p>89379104937</p>
+          </div>
+        </div>
+        <div class="top-bar_right">
+          <a href="car.html" class="top-bar_item top-bar__active"
+            ><i class="fas fa-cart-arrow-down"></i
+          ></a>
+          <a href="accaunt.html" class="top-bar_item top-bar__authorization"
+            >Аккаунт
+          </a>
+          <a href="register.html" class=" top-bar_item top-bar__authorization"
+            >Регистрация
+          </a>
+        </div>
+      </div>
+      <!-- menu -->
+      <nav class="menu">
+        <a href="index.html" class="logo">
+          <img class="logo_img" src="img/logo1.png" alt="logo" />
+          <span class="logo_text">Furniture</span>
+        </a>
+        <div class="menu_left">
+          <ul class="menu_nav">
+            <a class="menu_btn-close" href="#"
+              ><i class="fas fa-window-close"></i
+            ></a>
+            <li class="menu__active"><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="shop.html">Магазин</a></li>
+            <li><a href="collections.html">Коллекции</a></li>
+            <li><a href="blog.html">Блог</a></li>
+          </ul>
+          <form class="menu_form-search">
+            <input
+              class="menu_search-input"
+              type="search"
+              name="q"
+              placeholder="Поиск по сайту"
+            />
+            <button class="menu_search-btn" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <a href="#" class="menu_btn">
+            <span></span>
+          </a>
+        </div>
+      </nav>
+    </section>
+
+    <!-- title -->
+    <section class="form-title">
+      <h3>Авторизация</h3>
+    </section>
+
+    <!-- content -->
+    <section class="avtoriz">
+      <div class="avtoriz__box">
+        <!-- avtoriz-form -->
+        <form class="avtoriz__column avtoriz__form">
+          <div class="avtoriz__title">
+            <h4>Логин</h4>
+            <p>Если у вас есть аккаунт. Пожалуйста, войдите !</p>
+          </div>
+          <div class="avtoriz__item">
+            <label class="avtoriz__label" for="email">Введите email*</label>
+            <input class="avtoriz__input" name="email" type="text" />
+          </div>
+          <div class="avtoriz__item">
+            <label class="avtoriz__label" for="password">Введите пароль*</label>
+            <input class="avtoriz__input" name="password" type="password" />
+          </div>
+          <input class="avtoriz__btn " type="submit" value="войти" />
+        </form>
+
+        <!-- register -->
+        <div class="avtoriz__column avtoriz__register">
+          <div class="avtoriz__title">
+            <h4>Регистрация</h4>
+            <p>
+              Регистрация на этом сайте позволяет получить доступ к статусу
+              вашего заказа и посмотреть историю. Просто заполните поля ниже, и
+              мы быстро создадим для вас новую учетную запись. Мы будем
+              запрашивать только информацию, необходимую для ускорения и
+              упрощения процесса покупки.
+            </p>
+          </div>
+          <a class="avtoriz__btn" href="register.html">Создать новый аккаунт</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- banner -->
+    <section class="banner">
+      <div class="banner_item phone">
+        <i class="fas fa-phone-alt"></i>
+        <div class="banner_text">
+          <h4>Call order now</h4>
+          <p>(01)-222-777-888</p>
+        </div>
+      </div>
+      <div class="banner_item email">
+        <i class="far fa-envelope"></i>
+        <div class="banner_text">
+          <h4>Send a message</h4>
+          <p>contact@furnihome.com</p>
+        </div>
+      </div>
+      <div class="banner_item chat">
+        <i class="far fa-comments"></i>
+        <div class="banner_text">
+          <h4>Online support</h4>
+          <p>Live chat with us</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <a class="logo" href="#">
+        <img class="logo_img" src="img/logo1.png" alt="logo" />
+        <span class="logo_text">Furniture</span>
+      </a>
+      <div class="footer_social">
+        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="vk"><i class="fab fa-vk"></i></a>
+        <a href="#" class="mail"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer_text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+      </p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>

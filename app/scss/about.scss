@@ -1,0 +1,200 @@
+@import "mixin";
+@import "var";
+@import "reset";
+
+html {
+  font-family: $p;
+  body {
+    @include nav;
+    @include header;
+
+    // history
+    .history {
+      margin-top: 6.25rem;
+      position: relative;
+      .history-content {
+        top: 2.5rem;
+        background-color: rgba($color: #fff, $alpha: 0.8);
+        position: absolute;
+        z-index: 1000;
+        max-width: 920px;
+        width: 100%;
+        max-height: 90%;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 50px 60px 60px 75px;
+        box-shadow: -40px 40px 0px $peach;
+        .history-content-subtitle {
+          font-size: 1.25rem;
+          text-transform: uppercase;
+        }
+        .history-content-title {
+          font-size: 2.25rem;
+          margin-top: 2.25rem;
+          margin-bottom: 2.15rem;
+        }
+        .history-content-text {
+          font-size: 0.8rem;
+          line-height: 1.5;
+        }
+      }
+      .history-img {
+        display: block;
+        margin-left: auto;
+        max-width: 86.25rem;
+        width: 100%;
+        max-height: 48rem;
+        min-height: 25rem;
+        height: 100%;
+      }
+    }
+
+    // work
+    .work {
+      .work-title {
+        margin-top: 10.6rem;
+        text-align: center;
+        h3 {
+          font-size: 2.25rem;
+        }
+        .work-subtitle {
+          color: $grey;
+          margin-top: 2.8rem;
+          margin-bottom: 4.3rem;
+        }
+      }
+      .work-container {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        .work-container-item {
+          max-width: 29rem;
+          width: 100%;
+          svg {
+            color: $peach;
+            font-size: 3.4rem;
+          }
+          h4 {
+            margin-top: 2.5rem;
+            font-size: 1.25rem;
+          }
+          .item-text {
+            margin-top: 2.5rem;
+            color: $grey;
+          }
+        }
+      }
+    }
+
+    // info
+    .info {
+      margin-top: 9.3rem;
+      background-color: $peach;
+      color: #fff;
+      .info-box {
+        padding: 5rem 0;
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        svg {
+          font-size: 3.8rem;
+        }
+        .info-item-number {
+          margin-top: 3.2rem;
+          font-size: 3rem;
+          margin-bottom: 2.2rem;
+        }
+        .info-item-nume {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    // team
+    .team {
+      margin-bottom: 6rem;
+      .team-title {
+        margin-top: 10rem;
+        text-align: center;
+        h3 {
+          font-size: 2.25rem;
+        }
+        .team-subtitle {
+          color: $grey;
+          margin-top: 2.8rem;
+          margin-bottom: 4.3rem;
+        }
+      }
+      .team-container {
+        margin-top: 2.5rem;
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        text-align: center;
+        .team-car {
+          cursor: pointer;
+          position: relative;
+          max-width: 20.6rem;
+          .team-img {
+            max-width: 20.6rem;
+            width: 100%;
+            max-height: 28rem;
+            height: auto;
+            object-fit: cover;
+            object-position: 0 0;
+          }
+          .team-name {
+            margin-top: 1.7rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+          }
+          .team-descriptions {
+            color: $peach;
+            font-size: 1rem;
+            padding-bottom: 0.6rem;
+          }
+          .team-car-hover {
+            position: absolute;
+            background-color: $peach;
+            height: 8rem;
+            width: 100%;
+            bottom: 14%;
+            display: none;
+          }
+          &:hover .team-car-hover {
+            display: block;
+            color: #fff;
+            p {
+              margin-top: 40px;
+            }
+            svg {
+              color: #fff;
+              &:hover {
+                color: $brown;
+              }
+            }
+            .team-car-social {
+              margin-top: 30px;
+              .team-car-social_item {
+                margin-right: 20px;
+                font-size: 16px;
+                &:last-child {
+                  margin-right: 0px;
+                }
+              }
+            }
+          }
+          &:hover {
+            transition: 0.3s ease-out;
+
+            box-shadow: 0 0 10px #000;
+          }
+        }
+      }
+    }
+    @include banner;
+    @include footer;
+  }
+}
+@import "media-about";

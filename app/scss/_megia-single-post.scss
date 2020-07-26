@@ -1,0 +1,114 @@
+@include media-nav;
+/* От портретного планшета до ландшафтного экрана и настольных дисплеев */
+@media (min-width: 980px) and (max-width: 1259px) {
+  html body .post .post_img {
+    height: 34rem;
+  }
+  html body .post .post_body .post_title {
+    font-size: 2.7rem;
+  }
+  html body .comments {
+    grid-template-columns: 1fr;
+    &_title {
+      text-align: center;
+    }
+    &_lside .comment-form_input {
+      width: 80%;
+    }
+  }
+}
+/* От портретного планшета до ландшафтного экрана и настольных дисплеев */
+@media (min-width: 900px) and (max-width: 979px) {
+  html {
+    font-size: 14px;
+  }
+  html body .post .post_img {
+    height: 34rem;
+  }
+  html body .post .post_body .post_title {
+    font-size: 2.5rem;
+  }
+  html body .comments {
+    grid-template-columns: 1fr;
+    &_title {
+      text-align: center;
+    }
+    &_rside {
+      .comments_item {
+        padding: 2.125rem 0px;
+        padding-left: 2rem;
+        width: 100%;
+        margin-bottom: 1.8rem;
+      }
+    }
+    &_lside .comment-form_input {
+      width: 80%;
+    }
+  }
+}
+//   /* От ландшафтного экрана телефона до потретного планшета */
+@media (min-width: 700px) and (max-width: 899px) {
+  html {
+    font-size: 12px;
+  }
+  html body .post .post_img {
+    height: 34rem;
+  }
+  html body .comments {
+    grid-template-columns: 1fr;
+    &_title {
+      text-align: center;
+    }
+    &_rside {
+      .comments_item {
+        padding: 2.125rem 0px;
+        padding-left: 2rem;
+        width: 100%;
+        margin-bottom: 1.8rem;
+      }
+    }
+    &_lside .comment-form_input {
+      width: 80%;
+    }
+  }
+  html body .post .post_body .post_title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 699px) {
+  html {
+    font-size: 12px;
+  }
+  html body .comments {
+    grid-template-columns: 1fr;
+    &_title {
+      text-align: center;
+    }
+    &_rside {
+      .comments_item {
+        padding: 2.125rem 0px;
+        padding-left: 2rem;
+        width: 100%;
+        margin-bottom: 1.8rem;
+      }
+    }
+    &_lside .comment-form_input {
+      width: 100%;
+    }
+  }
+  html body .post .post_img {
+    height: 25rem;
+  }
+  html body .post .post_body .post_title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 470px) {
+  html body .post .post_img {
+    height: 23rem;
+  }
+  html body .post .post_body .post_title {
+    font-size: 1.5rem;
+  }
+}

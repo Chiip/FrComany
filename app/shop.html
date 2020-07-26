@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/shop.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <title>Каталог продуктов</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <section class="navigation wrapper">
+      <!-- top-bar -->
+      <div class="top-bar">
+        <div class="top-bar_left">
+          <div class="top-bar_item top-bar__location">
+            <i class="fas fa-location-arrow"></i>
+            <p>г. Пенза ул. Московская 85а</p>
+          </div>
+          <div class="top-bar_item top-bar_mail">
+            <i class="far fa-envelope"></i>
+            <p>support@furnihome.com</p>
+          </div>
+          <div class="top-bar_item top-bar__phone">
+            <i class="fas fa-phone-alt"></i>
+            <p>89379104937</p>
+          </div>
+        </div>
+        <div class="top-bar_right">
+          <a href="car.html" class="top-bar_item top-bar__active"
+            ><i class="fas fa-cart-arrow-down"></i
+          ></a>
+          <a href="accaunt.html" class="top-bar_item top-bar__authorization"
+            >Аккаунт
+          </a>
+          <a href="register.html" class=" top-bar_item top-bar__authorization"
+            >Регистрация
+          </a>
+        </div>
+      </div>
+      <!-- menu -->
+      <nav class="menu">
+        <a href="index.html" class="logo">
+          <img class="logo_img" src="img/logo1.png" alt="logo" />
+          <span class="logo_text">Furniture</span>
+        </a>
+        <div class="menu_left">
+          <ul class="menu_nav">
+            <a class="menu_btn-close" href="#"
+              ><i class="fas fa-window-close"></i
+            ></a>
+            <li class="menu__active"><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="shop.html">Магазин</a></li>
+            <li><a href="collections.html">Коллекции</a></li>
+            <li><a href="blog.html">Блог</a></li>
+          </ul>
+          <form class="menu_form-search">
+            <input class="menu_search-input" type="search" name="q" placeholder="Поиск по сайту"/>
+            <button class="menu_search-btn" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <a href="#" class="menu_btn">
+            <span></span>
+          </a>
+        </div>
+      </nav>
+    </section>
+
+    <!-- header -->
+    <header>
+      <div
+        class="parallax-img"
+        style="background-image: url(img/home/bg-advantages.jpg)"
+      >
+        <div class="header-content wrapper ">
+          <h3 class="header-title">Каталог продуктов</h3>
+        </div>
+      </div>
+    </header>
+
+    <!-- container -->
+    <section class="container wrapper">
+      <div class="left-sidebar">
+
+        <!-- form -->
+        <form id="filter-form" class="filter" action="/shop/shop" method="get">
+          <input type="hidden" name="page" value="1">
+          <input type="hidden" name="per-page" value="9">
+          <h3 class="left-sidebar_menu__title sidebar-title">Категории</h3>
+          <div class="form-group field-ts-radio">
+            <div id="ts-radio" class="filter__category category" data-toggle="buttons" role="radiogroup">
+              <label class="category__label ">
+                <input type="radio" class="category__input" name="ProductFilter[categories]" value="1">Гостинные
+              </label>
+              <label class="category__label ">
+                <input type="radio" class="category__input" name="ProductFilter[categories]" value="2">Спальни
+              </label>
+              <label class="category__label ">
+                <input type="radio" class="category__input" name="ProductFilter[categories]" value="3">Кухни
+              </label>
+              <label class="category__label ">
+                <input type="radio" class="category__input" name="ProductFilter[categories]" value="4">Ванные
+              </label>
+              <label class="category__label ">
+                <input type="radio" class="category__input" name="ProductFilter[categories]" value="5">Прихожие
+              </label>
+            </div>
+            <div class="help-block"></div>
+          </div>
+          <div class="filter__check check">
+            <h3 class=" sidebar-title">цвет</h3>
+            <div class="form-group field-productfilter-color">
+              <input type="hidden" name="ProductFilter[color]" value="">
+              <div id="productfilter-color">
+                <label class="check__label">
+                  <input type="checkbox" name="ProductFilter[color][]" value="white">
+                </label>
+                <label class="check__label">
+                  <input type="checkbox" name="ProductFilter[color][]" value="brown">
+                </label>
+                <label class="check__label">
+                  <input type="checkbox" name="ProductFilter[color][]" value="grey">
+                </label>
+                <label class="check__label">
+                  <input type="checkbox" name="ProductFilter[color][]" value="black">
+                </label>
+              </div>
+              <div class="help-block"></div>
+            </div>
+          </div>
+          <!-- price -->
+          <div class="filter__price price">
+            <h3 class="sidebar-title">цена</h3>
+            <div id="price__range"></div>
+            <div class="price__box">
+              <div class="form-group field-productfilter-min_price">
+                <input type="text" id="productfilter-min_price" class="price__input" name="ProductFilter[min_price]">
+                <div class="help-block"></div>
+              </div>
+              <div>-</div>
+              <div class="form-group field-productfilter-max_price">
+                <input type="text" id="productfilter-max_price" class="price__input" name="ProductFilter[max_price]">
+                <div class="help-block"></div>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="filter__btn">Применить фильтры</button>
+        </form>
+
+        <!--collection -->
+        <div class="left-sidebar_collection">
+          <h3 class="left-sidebar_collection__title sidebar-title">
+            Kоллекции
+          </h3>
+          <div class="collection-sl">
+            <a href="#" class="collection-sl_slide slide_one" style="background-image: url(img/collection/2.jpg)">
+              <div class="collection-sl_slide__text">
+                <h3>Мебель 2017</h3>
+                <p>Нажмите чтобы посмотреть</p>
+              </div>
+            </a>
+            <a href="#" class="collection-sl_slide slide_two" style="background-image: url(img/collection/3.jpg)">
+              <div class="collection-sl_slide__text">
+                <h3>Мебель 2018</h3>
+                <p>Нажмите чтобы посмотреть</p>
+              </div>
+            </a>
+            <a href="#" class="collection-sl_slide slide_three" style="background-image: url(img/collection/4.jpg)">
+              <div class="collection-sl_slide__text">
+                <h3>Мебель 2019</h3>
+                <p>Нажмите чтобы посмотреть</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <!--recommended-->
+        <div class="left-sidebar_recommended">
+          <h3 class="left-sidebar_recommended-product__title sidebar-title">
+            Рекомендации
+          </h3>
+          <a href="#" class="recommended-car">
+            <img
+              class="car-img"
+              src="img/singleProduct/single1.jpg"
+              alt="photo"
+            />
+            <div class="car-description">
+              <p class="car-name">furnityre</p>
+              <p class="car-price">200 р.</p>
+            </div>
+          </a>
+          <a href="#" class="recommended-car">
+            <img
+              class="car-img"
+              src="img/singleProduct/single1.jpg"
+              alt="photo"
+            />
+            <div class="car-description">
+              <p class="car-name">furnityre</p>
+              <p class="car-price">200 р.</p>
+            </div>
+          </a>
+          <a href="#" class="recommended-car">
+            <img
+              class="car-img"
+              src="img/singleProduct/single1.jpg"
+              alt="photo"
+            />
+            <div class="car-description">
+              <p class="car-name">furnityre</p>
+              <p class="car-price">200 р.</p>
+            </div>
+          </a>
+          <a href="#" class="recommended-car">
+            <img
+              class="car-img"
+              src="img/singleProduct/single1.jpg"
+              alt="photo"
+            />
+            <div class="car-description">
+              <p class="car-name">furnityre</p>
+              <p class="car-price">200 р.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!--right-side  -->
+      <div class="right-side">
+        <!-- catalog -->
+        <div class="catalog">
+          <ul class="pagination"><li class="prev disabled"><span>&laquo;</span></li>
+            <li class="active"><a href="/shop/shop?page=1&amp;per-page=9" data-page="0">1</a></li>
+            <li><a href="/shop/shop?page=2&amp;per-page=9" data-page="1">2</a></li>
+            <li class="next"><a href="/shop/shop?page=2&amp;per-page=9" data-page="1">&raquo;</a></li>
+          </ul>
+          <div class="car catalog__car">
+            <a href="single_product.html" class="car_product ">
+              <figure class="car_content">
+              <span class="car_hover">
+                <img class="car_img catalog__img" src="img/singleProduct/single1.jpg" alt="photo"/>
+              </span>
+                <figcaption class="car_descrpt">
+                  <p class="car_collection">collection</p>
+                  <h3 class="car_title">furniture</h3>
+                  <p class="car_prise">100 p.</p>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" class="modal__link car__link"><i class="fas fa-cart-arrow-down"></i></a>
+          </div>
+          <div class="car catalog__car">
+            <a href="single_product.html" class="car_product ">
+              <figure class="car_content">
+              <span class="car_hover">
+                <img class="car_img catalog__img" src="img/singleProduct/single1.jpg" alt="photo"/>
+              </span>
+                <figcaption class="car_descrpt">
+                  <p class="car_collection">collection</p>
+                  <h3 class="car_title">furniture</h3>
+                  <p class="car_prise">100 p.</p>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" class="modal__link car__link"><i class="fas fa-cart-arrow-down"></i></a>
+          </div>
+          <div class="car catalog__car">
+            <a href="single_product.html" class="car_product ">
+              <figure class="car_content">
+              <span class="car_hover">
+                <img class="car_img catalog__img" src="img/singleProduct/single1.jpg" alt="photo"/>
+              </span>
+                <figcaption class="car_descrpt">
+                  <p class="car_collection">collection</p>
+                  <h3 class="car_title">furniture</h3>
+                  <p class="car_prise">100 p.</p>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" class="modal__link car__link"><i class="fas fa-cart-arrow-down"></i></a>
+          </div>
+          <div class="car catalog__car">
+            <a href="single_product.html" class="car_product ">
+              <figure class="car_content">
+              <span class="car_hover">
+                <img class="car_img catalog__img" src="img/singleProduct/single1.jpg" alt="photo"/>
+              </span>
+                <figcaption class="car_descrpt">
+                  <p class="car_collection">collection</p>
+                  <h3 class="car_title">furniture</h3>
+                  <p class="car_prise">100 p.</p>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" class="modal__link car__link"><i class="fas fa-cart-arrow-down"></i></a>
+          </div>
+          <div class="car catalog__car">
+            <a href="single_product.html" class="car_product ">
+              <figure class="car_content">
+              <span class="car_hover">
+                <img class="car_img catalog__img" src="img/singleProduct/single1.jpg" alt="photo"/>
+              </span>
+                <figcaption class="car_descrpt">
+                  <p class="car_collection">collection</p>
+                  <h3 class="car_title">furniture</h3>
+                  <p class="car_prise">100 p.</p>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" class="modal__link car__link"><i class="fas fa-cart-arrow-down"></i></a>
+          </div>
+          <div class="car catalog__car">
+            <a href="single_product.html" class="car_product ">
+              <figure class="car_content">
+              <span class="car_hover">
+                <img class="car_img catalog__img" src="img/singleProduct/single1.jpg" alt="photo"/>
+              </span>
+                <figcaption class="car_descrpt">
+                  <p class="car_collection">collection</p>
+                  <h3 class="car_title">furniture</h3>
+                  <p class="car_prise">100 p.</p>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" class="modal__link car__link"><i class="fas fa-cart-arrow-down"></i></a>
+          </div>
+          <div class="car catalog__car">
+            <a href="single_product.html" class="car_product ">
+              <figure class="car_content">
+              <span class="car_hover">
+                <img class="car_img catalog__img" src="img/singleProduct/single1.jpg" alt="photo"/>
+              </span>
+                <figcaption class="car_descrpt">
+                  <p class="car_collection">collection</p>
+                  <h3 class="car_title">furniture</h3>
+                  <p class="car_prise">100 p.</p>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" class="modal__link car__link"><i class="fas fa-cart-arrow-down"></i></a>
+          </div>
+          <div class="car catalog__car">
+            <a href="single_product.html" class="car_product ">
+              <figure class="car_content">
+              <span class="car_hover">
+                <img class="car_img catalog__img" src="img/singleProduct/single1.jpg" alt="photo"/>
+              </span>
+                <figcaption class="car_descrpt">
+                  <p class="car_collection">collection</p>
+                  <h3 class="car_title">furniture</h3>
+                  <p class="car_prise">100 p.</p>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" class="modal__link car__link"><i class="fas fa-cart-arrow-down"></i></a>
+          </div>
+          <div class="car catalog__car">
+            <a href="single_product.html" class="car_product ">
+              <figure class="car_content">
+              <span class="car_hover">
+                <img class="car_img catalog__img" src="img/singleProduct/single1.jpg" alt="photo"/>
+              </span>
+                <figcaption class="car_descrpt">
+                  <p class="car_collection">collection</p>
+                  <h3 class="car_title">furniture</h3>
+                  <p class="car_prise">100 p.</p>
+                </figcaption>
+              </figure>
+            </a>
+            <a href="#" class="modal__link car__link"><i class="fas fa-cart-arrow-down"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- banner -->
+    <section class="banner wrapper">
+      <div class="banner_item phone">
+        <i class="fas fa-phone-alt"></i>
+        <div class="banner_text">
+          <h4>Call order now</h4>
+          <p>(01)-222-777-888</p>
+        </div>
+      </div>
+      <div class="banner_item email">
+        <i class="far fa-envelope"></i>
+        <div class="banner_text">
+          <h4>Send a message</h4>
+          <p>contact@furnihome.com</p>
+        </div>
+      </div>
+      <div class="banner_item chat">
+        <i class="far fa-comments"></i>
+        <div class="banner_text">
+          <h4>Online support</h4>
+          <p>Live chat with us</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- footer -->
+    <footer class="footer">
+      <a class="logo" href="#">
+        <img class="logo_img" src="img/logo1.png" alt="logo" />
+        <span class="logo_text">Furniture</span>
+      </a>
+      <div class="footer_social">
+        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="vk"><i class="fab fa-vk"></i></a>
+        <a href="#" class="mail"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer_text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+      </p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>

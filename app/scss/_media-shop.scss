@@ -1,0 +1,118 @@
+@include media-nav;
+@include media-header;
+@include media-banner;
+@include media-modal;
+// 1500
+@media (max-width: 1500px) {
+  html body .container .right-side .catalog__car {
+    flex: 0 1 46.33%;
+  }
+}
+// 1300
+@media (max-width: 1300px) {
+  html {
+    font-size: 14px;
+  }
+}
+// 1250
+@media (max-width: 1250px) {
+  html body .container .right-side .catalog__car {
+    flex: 0 1 43.33%;
+  }
+}
+// 900
+@media (max-width: 900px) {
+  html body .container .right-side .catalog__car {
+    flex: 0 1 83.33%;
+  }
+}
+// 700
+@media (max-width: 700px) {
+
+  html body .container {
+    flex-wrap: wrap;
+    .left-sidebar {
+      flex: 0 1 100%;
+      .filter {
+        .category{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .category__label{
+            margin-top: 0;
+            margin-left: 1rem;
+            &:first-child{
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      .left-sidebar_recommended {
+        display: none;
+      }
+    }
+    .right-side {
+      flex: 0 1 100%;
+    }
+  }
+  html body .container .left-sidebar .left-sidebar_collection {
+    display: none;
+  }
+  html body .container .right-side .catalog__car {
+    flex: 0 1 43.33%;
+  }
+}
+// 560
+@media (max-width: 560px) {
+  html body .container .left-sidebar .filter {
+    &__check {
+      flex: 0 1 100%;
+    }
+    &__price {
+      flex: 0 1 100%;
+      margin: 0;
+    }
+  }
+  html body .container .right-side .catalog {
+    margin-top: 4rem;
+  }
+  html body .container .right-side .catalog__car {
+    flex: 0 1 86.33%;
+  }
+}
+@media (max-width: 460px) {
+  html body .container  .left-sidebar{
+      .filter {
+        .sidebar-title{
+          text-align: center;
+        }
+        .category{
+          flex-direction: column;
+          align-items: center;
+          .category__label{
+            margin-top:1rem;
+            margin-left: 0;
+            &:first-child{
+              margin-top:0;
+            }
+          }
+        }
+        #productfilter-color{
+          display: flex;
+          justify-content: center;
+        }
+        .price {
+          margin: 3.25rem 0;
+          .ui-slider {
+            width: 80%;
+            margin: auto;
+          }
+          &__input {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+
+    }
+}

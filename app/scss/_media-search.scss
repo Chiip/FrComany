@@ -1,0 +1,53 @@
+@include media-nav;
+@include media-banner;
+@include media-modal;
+@media (max-width: 1300px) {
+  html {
+    font-size: 14px;
+  }
+  html body .found__car {
+    flex: 0 1 30%;
+  }
+}
+@media (max-width: 1100px) {
+  html body .found__car {
+    flex: 0 1 28%;
+  }
+  html body .search-result {
+    flex-wrap: wrap;
+  }
+  html body .search-result__text {
+    flex: 0 1 60%;
+  }
+  html body .form-search {
+    flex: 0 1 40%;
+  }
+}
+@media (max-width: 800px) {
+  html body .found__car {
+    flex: 0 1 40%;
+  }
+  html body .search-result__text {
+    flex: 0 1 100%;
+  }
+  html body .form-search {
+    justify-content: start;
+    margin-top: 2rem;
+    flex: 0 1 50%;
+  }
+  html body .form-search .form-search__input {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  html body .found__car {
+    flex: 0 1 80%;
+  }
+  html body .found__img {
+    max-height: 24.8rem;
+  }
+  html body .form-search {
+    justify-content: start;
+    flex: 0 1 80%;
+  }
+}

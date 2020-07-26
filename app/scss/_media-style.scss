@@ -1,0 +1,419 @@
+@include media-nav;
+@include media-modal;
+@media (max-width: 1800px) {
+  // News
+  html body .news {
+    .news-posts {
+      .news-post-item {
+        width: 20.25rem;
+        height: 20.25rem;
+      }
+    }
+  }
+}
+@media (max-width: 1600px) {
+  html body .product .catalog {
+    &_car {
+      width: 18rem;
+      margin: 0 10px 30px 10px;
+    }
+    &_img {
+      height: 16.63rem;
+    }
+  }
+  // News
+  html body .news {
+    .news-posts {
+      .news-post-item {
+        width: 28.25rem;
+        height: 27.25rem;
+      }
+    }
+  }
+  // Newsletter
+  html body .newsletter .newsletter-container .newsletter-form {
+    .newsletter-mail {
+      width: 75%;
+    }
+    .newsletter-sub {
+      width: 25%;
+    }
+  }
+}
+@media (max-width: 1400px) {
+  html body .promotion {
+    grid-gap: 7rem;
+  }
+}
+
+// 1300
+@media (max-width: 1300px) {
+  html {
+    font-size: 14px;
+  }
+  html body .promotion {
+    grid-gap: 4rem;
+    .promotion-item p {
+      width: 80%;
+    }
+  }
+  html body .newsletter {
+    .newsletter-container {
+      // display: block;
+      p {
+        font-size: 1.7rem;
+      }
+      .newsletter-form {
+        .newsletter-mail {
+          width: 100%;
+        }
+        .newsletter-sub {
+          width: 30%;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+// 1100
+@media (max-width: 1100px) {
+  html body .banner {
+    grid-template-rows: 19rem;
+    .banner-left {
+      .banner-left-box {
+        font-size: 2rem;
+        line-height: 2.125rem;
+        p {
+          margin-bottom: 1rem;
+        }
+        a {
+          padding: 12px;
+          letter-spacing: 1px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  // News
+  html body .news {
+    .news-posts {
+      .news-post-item {
+        width: 22.25rem;
+        height: 20.25rem;
+      }
+    }
+  }
+}
+
+// 1060
+@media (max-width: 1055px) {
+  html body .product {
+    .product-menu li {
+      margin-right: 0.7rem;
+    }
+    .catalog {
+      .catalog_car {
+        width: 25rem;
+      }
+      .catalog_img {
+        height: 23.63rem;
+      }
+    }
+  }
+}
+
+// 1000
+@media (max-width: 1000px) {
+  html body header .header-sl .header-sl_slide .sl_text {
+    padding: 16.87rem 0px 17.7rem 4.375rem;
+    h3 {
+      font-size: 2.8rem;
+      margin-bottom: 1.7rem;
+    }
+  }
+  html body header .header-sl .slide_two .sl_text {
+    margin-right: 4.375rem;
+  }
+}
+
+// 880
+@media (max-width: 880px) {
+  html body header .header-sl .header-sl_slide .sl_text {
+    padding: 11.87rem 0px 12.7rem 4.375rem;
+  }
+  html body .promotion {
+    grid-template-columns: repeat(2, 1fr);
+    .promotion-item {
+      width: 67%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  html body .banner {
+    grid-template-columns: 1fr;
+    grid-template-rows: 23rem;
+    .banner-left {
+      justify-content: left;
+      padding-left: 10%;
+    }
+    .banner-right {
+      display: none;
+    }
+  }
+  html body .newsletter {
+    .newsletter-container {
+      display: block;
+      text-align: center;
+      p {
+        font-size: 1.7rem;
+        margin-right: 0;
+      }
+      .newsletter-form {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 865px) {
+  html body .product {
+    .product-menu li {
+      margin-right: 0.7rem;
+    }
+    .catalog {
+      .catalog_car {
+        width: 18rem;
+      }
+      .catalog_img {
+        height: 17rem;
+      }
+    }
+  }
+  html body .advantages .advantages-box {
+    width: 80%;
+  }
+}
+
+// 780
+@media (max-width: 780px) {
+  // News
+  html body .news {
+    .news-posts {
+      .news-post-item {
+        width: 18.25rem;
+        height: 17.25rem;
+      }
+    }
+  }
+}
+
+// 690
+@media (max-width: 690px) {
+  html body header .header-sl .header-sl_slide .sl_text {
+    padding: 7.87rem 0px 7.7rem 5.375rem;
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+    p {
+      font-size: 0.75rem;
+      width: 60%;
+    }
+    a {
+      padding: 1rem 2rem 1.2rem 2rem;
+      font-size: 0.65rem;
+    }
+  }
+  html body .newsletter .newsletter-container .newsletter-form .newsletter-sub {
+    width: 20%;
+  }
+}
+
+// 660
+@media (max-width: 660px) {
+  html body .promotion {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    .promotion-item {
+      width: 67%;
+      margin-left: auto;
+      margin-right: auto;
+      svg {
+        font-size: 1.8rem;
+      }
+      h4 {
+        margin-left: 1.5rem;
+      }
+      p {
+        margin-left: 1.5rem;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  html body .product {
+    .product-menu li {
+      margin-right: 0.7rem;
+    }
+    .catalog {
+      .catalog_car {
+        width: 16rem;
+      }
+      .catalog_img {
+        height: 15rem;
+      }
+    }
+  }
+  // Advantages
+  html body .advantages .advantages-box {
+    padding-top: 3.6rem;
+    padding-bottom: 13.2rem;
+    h3 {
+      font-size: 2rem;
+    }
+  }
+  // News
+  html body .news {
+    .news-posts {
+      .news-post-item {
+        width: 25.25rem;
+        height: 24.25rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 585px) {
+  html body .product {
+    .catalog {
+      .catalog_car {
+        width: 23rem;
+      }
+      .catalog_img {
+        height: 21rem;
+      }
+    }
+  }
+  html body .newsletter .newsletter-container {
+    .newsletter-form {
+      width: 70%;
+      .newsletter-mail {
+        width: 75%;
+        font-size: 1rem;
+      }
+      .newsletter-sub {
+        padding: 0;
+        width: 25%;
+      }
+    }
+  }
+}
+//  560
+@media (max-width: 560px) {
+  html body .product {
+    margin-top: 8rem;
+    .product-menu {
+      top: -80px;
+      li {
+        display: block;
+        margin-right: 0;
+        text-align: center;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+
+// 500
+@media (max-width: 500px) {
+  html body .advantages .advantages-box {
+    padding-top: 3.6rem;
+    padding-bottom: 13.2rem;
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+  }
+  html body .newsletter .newsletter-container {
+    .newsletter-form {
+      width: 100%;
+      .newsletter-mail {
+        width: 80%;
+        font-size: 1rem;
+      }
+      .newsletter-sub {
+        padding: 0;
+        width: 30%;
+      }
+    }
+  }
+}
+//  420
+@media (max-width: 470px) {
+  html body header .header-sl .header-sl_slide .sl_text {
+    padding: 6.87rem 0px 7rem 5.375rem;
+    h3 {
+      font-size: 1.7rem;
+      margin-bottom: 0.7rem;
+    }
+    p {
+      font-size: 0.7rem;
+    }
+    a {
+      padding: 1rem 1rem 1.2rem 1rem;
+      letter-spacing: 1px;
+      font-size: 0.65rem;
+    }
+  }
+  html body header .header-sl .slide_two {
+    .sl_text {
+      margin-right: 0;
+      text-align: left;
+      p {
+        margin-left: 1px;
+      }
+    }
+  }
+  html body .promotion {
+    .promotion-item {
+      svg {
+        font-size: 1.8rem;
+      }
+      h4 {
+        font-size: 0.7rem;
+        margin-left: 1.5rem;
+      }
+      p {
+        margin-left: 1.5rem;
+        font-size: 0.6rem;
+      }
+    }
+  }
+  // News
+  html body .news {
+    .news-posts {
+      .news-post-item {
+        width: 21.25rem;
+        height: 19.25rem;
+      }
+    }
+  }
+}
+@media (max-width: 380px) {
+  html body .product {
+    .catalog {
+      .catalog_car {
+        width: 19rem;
+      }
+      .catalog_img {
+        height: 19rem;
+      }
+    }
+  }
+}

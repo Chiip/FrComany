@@ -1,0 +1,39 @@
+@include media-nav;
+@include media-header;
+@include media-banner;
+@include media-modal;
+@media (max-width: 1720px) {
+  html body .collection_car {
+    max-width: 25rem;
+  }
+}
+@media (max-width: 1490px) {
+  html body .collection_car {
+    max-width: 21rem;
+  }
+}
+@media (max-width: 1300px) {
+  html body .collection_car {
+    max-width: 20rem;
+  }
+}
+@media (max-width: 1200px) {
+  html body .collection_car {
+    max-width: 25rem;
+  }
+}
+@media (max-width: 990px) {
+  html body .collection_car {
+    max-width: 21rem;
+  }
+}
+@media (max-width: 840px) {
+  html body .collection_car {
+    max-width: 17rem;
+  }
+}
+@media (max-width: 700px) {
+  html body .collection_car {
+    max-width: 30rem;
+  }
+}

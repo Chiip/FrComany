@@ -1,0 +1,266 @@
+@import "reset";
+@import "mixin";
+@import "libs";
+@import "var";
+
+html {
+  font-family: $p;
+  body {
+    @include nav;
+    @include header;
+    .container {
+      margin-top: 3.125rem;
+      display: flex;
+      margin-bottom: 8rem;
+      // left-sidebar
+      .left-sidebar {
+        flex: 0 1 20%;
+
+        .sidebar-title {
+          font-size: 1.5rem;
+        }
+
+        //filter
+        .filter {
+          position: relative;
+          .sidebar-title {
+            margin: 1.25rem 0;
+          }
+          .filter__category{
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+          }
+          .category{
+            display: flex;
+            flex-direction: column;
+            &__input{
+              opacity: 0;
+              position: absolute;
+              z-index: -10;
+            }
+            &__label{
+              margin-top: 1.5rem;
+              font-size: 1.2rem;
+              color: $grey;
+              cursor: pointer;
+              font-weight: 500;
+              &:first-child{
+                margin-top: 0;
+              }
+              &:hover, &:focus {
+                color: $peach;
+              }
+            }
+            .active{
+              color: $peach;
+            }
+          }
+
+          .check {
+            input[type="checkbox"] {
+              position: absolute;
+              z-index: -1;
+              opacity: 0;
+            }
+            &__label {
+              margin-right: 2.5rem;
+              cursor: pointer;
+              &:before {
+                content: "";
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                border-radius: 25px;
+                border: 1px solid $grey;
+                background-color: $grey;
+              }
+            }
+            label:hover:before, label:hover:focus{  border: 1px solid $peach;}
+
+            label:nth-child(1):before{
+              background-color: $white;
+            }
+            label:nth-child(2):before{
+              background-color: $brown;
+            }
+            label:nth-child(3):before{
+              background-color: $grey;
+            }
+            label:nth-child(4):before{
+              background-color: $black;
+            }
+          }
+
+          .price {
+            margin: 1.25rem 0;
+            background: transparent;
+
+            .ui-slider {
+              width: 90%;
+              background-color: $border;
+            }
+
+            .ui-slider-range {
+              background-color: $peach;
+            }
+
+            .ui-state-default {
+              background-color: $border;
+            }
+
+            .ui-state-hover {
+              border: 1px solid $peach;
+              background-color: $peach;
+            }
+
+            .ui-state-focus {
+              border: 1px solid $peach;
+            }
+            &__box{
+              margin-top: 1rem;
+              display: flex;
+              align-items: center;
+            }
+            .form-group{
+              width: 20%;
+              margin: 0 0.7rem;
+            }
+            &__input {
+              padding: 0 5px;
+              width: 90%;
+              background:inherit;
+              height: 2rem;
+
+              border: 1px solid $border;
+            }
+          }
+
+          &__btn {
+            box-sizing: border-box;
+            padding: 0.8rem;
+            background-color: $peach;
+            border: 1px solid $peach;
+            color: $white;
+            transition: all 0.7s;
+
+            &:hover {
+              background-color: transparent;
+              color: $peach;
+            }
+          }
+        }
+
+        // collection
+        .left-sidebar_collection {
+          margin-top: 3.125rem;
+          margin-bottom: 3.125rem;
+          .collection-sl {
+            margin-top: 1.5rem;
+            max-width: 18.75rem;
+            width: 100%;
+            .collection-sl_slide {
+              @include bg;
+              width: 100%;
+              display: block;
+              height: 22.8rem;
+              text-align: center;
+              text-decoration: none;
+              .collection-sl_slide__text {
+                margin-top: 100%;
+                h3 {
+                  font-size: 1.5rem;
+                  margin-bottom: 0.625rem;
+                }
+                color: #fff;
+                p {
+                  text-decoration: underline;
+                }
+              }
+            }
+            //тoчки
+            .slick-dots {
+              margin-top: 1.25rem;
+              display: block;
+              width: 100%;
+              padding: 0;
+              margin: 0;
+              list-style: none;
+              text-align: center;
+              li {
+                button:before {
+                  border: 2px solid $grey;
+                  border-radius: 25px;
+                  background-color: $grey;
+                  font-family: "slick";
+                  font-size: 0px;
+                  width: 7px;
+                  height: 7px;
+                  content: "";
+                  opacity: 1;
+                  color: $grey;
+                }
+              }
+            }
+            .slick-dots li.slick-active button:before {
+              opacity: 1;
+              background-color: transparent;
+            }
+          }
+        }
+
+        // recommended
+        .left-sidebar_recommended {
+          .recommended-car {
+            margin-top: 1.25rem;
+            display: flex;
+            text-decoration: none;
+            img {
+              width: 100px;
+              height: 100px;
+            }
+            .car-description {
+              margin-top: 5px;
+              margin-left: 1.25rem;
+              font-weight: 600;
+              color: #000;
+              .car-name {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      //catalog
+      .right-side {
+        flex: 0 1 80%;
+        .catalog {
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          @include car;
+          &__car {
+            flex: 0 1 30.33%;
+            position: relative;
+            margin: 15px;
+          }
+          &__img {
+            width: 100%;
+            max-height: 28.2rem;
+            height: auto;
+          }
+          @include pagination;
+          .pagination{
+            position: absolute;
+            bottom:-50px;
+          }
+        }
+      }
+    }
+    @include banner;
+    @include modal;
+    @include footer;
+  }
+}
+@import "media-shop";

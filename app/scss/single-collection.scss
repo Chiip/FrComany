@@ -1,0 +1,37 @@
+@import "reset";
+@import "mixin";
+@import "libs";
+@import "var";
+
+html {
+  font-family: $p;
+  font-size: 16px;
+  body {
+    @include nav;
+    @include header;
+
+    //catalog
+    .collection {
+      margin-bottom: 2rem;
+      margin-top: 6.75rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      @include car;
+      &_car {
+        margin: 15px;
+        max-width: 30rem;
+        width: auto;
+      }
+      &_img {
+        max-height: 35rem;
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+  @include modal;
+  @include banner;
+  @include footer;
+}
+@import "media-single-collection";

@@ -1,0 +1,77 @@
+@import "reset";
+@import "mixin";
+@import "var";
+
+html {
+  font-family: $p;
+  font-size: 16px;
+  body {
+    @include nav;
+    @include header;
+    .blog {
+      margin-bottom: 7rem;
+      .blog-title {
+        color: $grey;
+        font-size: 2.25rem;
+        text-align: center;
+        margin-top: 3.125rem;
+      }
+      .blog-container {
+        margin-top: 3.125rem;
+        display: grid;
+        grid-gap: 1.8rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        .blog-container_car {
+          max-width: 450px;
+          width: 100%;
+          line-height: 28px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          display: flex;
+          flex-direction: column;
+          text-decoration: none;
+          color: $grey;
+          .car__container{
+            position: relative;
+            padding: 40% 0 40% 0;
+            overflow: hidden;
+            .car-img {
+              position: absolute;
+              top:0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: fill;
+              object-position: center;
+            }
+          }
+          .car-title {
+            margin-top: 10px;
+            padding-left: 10px;
+          }
+          .car-descrpt {
+            padding-left: 10px;
+            flex: 1 1 auto;
+          }
+          .additional-inf {
+            padding-left: 10px;
+            display: flex;
+            padding-bottom: 5px;
+            .additional-inf_date {
+              display: flex;
+              align-items: center;
+              svg {
+                margin-right: 5px;
+              }
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+      @include pagination;
+    }
+
+    @include banner;
+    @include footer;
+  }
+}
+@import "media-blog";

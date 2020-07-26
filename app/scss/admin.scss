@@ -1,0 +1,198 @@
+@import "reset";
+@import "mixin";
+@import "var";
+@import "libs";
+
+html {
+  font-family: $p;
+  font-size: 16px;
+  body {
+    .navigation {
+      position: relative;
+      // top-bar
+      .top-bar {
+        display: flex;
+        &_item {
+          display: flex;
+          align-items: center;
+          color: $peach;
+          border-left: 1px solid #e4e4e4;
+          padding: 0 1rem;
+          text-decoration: none;
+          &:last-child {
+            border-right: 1px solid #e4e4e4;
+          }
+        }
+        &_right {
+          display: flex;
+          margin-left:auto;
+          color: $grey;
+          border-bottom: 1px solid #e4e4e4;
+          height: 50px;
+          font-size: 0.67rem;
+          .top-bar__active :hover {
+            color: $brown;
+          }
+          .top-bar__authorization {
+            font-weight: 600;
+            &:hover {
+              color: $brown;
+            }
+          }
+        }
+      }
+
+      // menu
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.7rem 0;
+        .logo {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          &_text {
+            margin-left: 0.83rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: $peach;
+            font-weight: 600;
+            font-size: 1.8rem;
+          }
+        }
+        &_left {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .menu_btn-close {
+            display: none;
+          }
+        }
+        &_nav {
+          margin-right: 2.2rem;
+          li {
+            display: inline;
+            margin-right: 2.2rem;
+            .current {
+              color: $peach;
+            }
+            a {
+              font-weight: 600;
+              color: $darkGrey;
+              font-size: 18px;
+              text-decoration: none;
+              &:hover {
+                color: $peach;
+              }
+            }
+            &:last-child {
+              margin-right: 0px;
+            }
+          }
+        }
+        &_form-search {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          .menu_search-input {
+            padding: 5px;
+            border: 1px solid #e4e4e4;
+          }
+          .menu_search-btn {
+            padding: 5px 10px;
+            border: 1px solid #e4e4e4;
+            svg {
+              color: $peach;
+            }
+          }
+        }
+        &_btn {
+          position: absolute;
+          display: none;
+          right: 0;
+          height: 30px;
+          width: 30px;
+          background-color: #fff;
+          background-color: $peach;
+        }
+        &_btn span,
+        &_btn span::before,
+        &_btn span::after {
+          position: absolute;
+          top: 50%;
+          margin-top: -1px;
+          left: 50%;
+          margin-left: -10px;
+          width: 20px;
+          height: 2px;
+          background-color: #fff;
+        }
+        &_btn span::before,
+        &_btn span::after {
+          content: "";
+          display: block;
+          transition: 0.2s;
+        }
+        &_btn span::before {
+          transform: translateY(-5px);
+        }
+        &_btn span::after {
+          transform: translateY(5px);
+        }
+        &_btn__active span:before {
+          transform: rotate(-35deg);
+          width: 10px;
+          transform-origin: left bottom;
+        }
+        &_btn__active span:after {
+          transform: rotate(35deg);
+          width: 10px;
+          transform-origin: left top;
+        }
+      }
+    }
+
+    .admin__title {
+      font-size: 1.6rem;
+      text-align: center;
+      color:grey;
+    }
+    .admin__btn {
+      display: inline-block;
+      padding: 1rem;
+      margin-top: 1rem;
+      text-decoration: none;
+      border-radius: 25px;
+      background-color: $peach;
+      border:1px solid $peach;
+      color: $white;
+      transition: ease 0.3s;
+      &:hover {
+        color:$peach;
+        background: transparent;
+      }
+    }
+    .summary {
+      font-size:1rem;
+      margin: 1rem 0;
+    }
+    thead tr th a {
+      color:$peach;
+      text-decoration: none;
+    }
+    .glyphicon{
+      color: $grey;
+      transition: ease 0.3s;
+      &:hover {
+        color: $peach;
+      }
+    }
+    @include pagination;
+    .pagination > li:last-child > a, .pagination > li:last-child > span {
+      border-top-right-radius: none;
+      border-bottom-right-radius: none; 
+  }
+    @include footer;
+  }
+}

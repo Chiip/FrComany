@@ -1,0 +1,28 @@
+@include media-nav;
+@include media-banner;
+@media (max-width: 1300px) {
+  html {
+    font-size: 14px;
+  }
+  html body .register {
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+
+  html body .register {
+    width: 80%;
+  }
+  html body .signup {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+
+  html body .register {
+    width: 90%;
+  }
+  html body .signup {
+    width: 95%;
+  }
+}

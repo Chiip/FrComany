@@ -1,0 +1,181 @@
+@include media-nav;
+@include media-header;
+@include media-banner;
+
+@media (max-width: 1800px) {
+  html body .team .team-container .team-car .team-img {
+    max-height: 21rem;
+  }
+}
+@media (max-width: 1200px) {
+  // history
+  html body .history .history-content {
+    width: 90%;
+    padding: 50px 60px 25px 25px;
+    .history-content-subtitle {
+      font-size: 1rem;
+    }
+    .history-content-title {
+      font-size: 2rem;
+      margin-top: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+  html body .work .work-container .work-container-item .item-text {
+    width: 90%;
+  }
+  html body .team .team-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  html body .team .team-container .team-car .team-img {
+    max-height: 24rem;
+  }
+}
+
+// 1050
+@media (max-width: 1000px) {
+  // history
+  html body .history .history-content {
+    width: 90%;
+    padding: 25px 40px 25px 25px;
+    box-shadow: -30px 30px 0px $peach;
+    overflow-y: scroll;
+    &::-webkit-scrollbar-track {
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      background-color: $grey;
+      box-shadow: 0px 0px 3px $darkGrey inset;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      background-color: $peach;
+      box-shadow: 0px 1px 1px #fff inset;
+    }
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+    .history-content-subtitle {
+      font-size: 1rem;
+    }
+    .history-content-title {
+      font-size: 2rem;
+      margin-top: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+  html body .info {
+    margin-top: 7.3rem;
+    .info-box {
+      padding: 5rem 0;
+      svg {
+        font-size: 2.8rem;
+      }
+      .info-item-number {
+        margin-top: 2rem;
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+}
+
+// 900
+@media (max-width: 800px) {
+  // work
+  html body .work {
+    .work-title {
+      margin-top: 4rem;
+      h3 {
+        font-size: 1.7rem;
+      }
+      .work-subtitle {
+        font-size: 1rem;
+        margin-top: 1.8rem;
+        margin-bottom: 0;
+      }
+    }
+    .work-container {
+      flex-wrap: wrap;
+      justify-content: center;
+      .work-container-item {
+        margin-top: 2rem;
+        .item-text {
+          margin-top: 2.5rem;
+          font-size: 1rem;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+// 680
+@media (max-width: 680px) {
+  // history
+  html body .history .history-content {
+    padding: 15px 20px 25px 25px;
+    max-height: 85%;
+    .history-content-subtitle {
+      font-size: 0.8rem;
+    }
+    .history-content-title {
+      font-size: 1.7rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.7rem;
+    }
+  }
+  html body .info .info-box {
+    padding: 5rem 0;
+    flex-wrap: wrap;
+    .info-item {
+      width: 14rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    svg {
+      font-size: 2.4rem;
+    }
+    .info-item-number {
+      margin-top: 1.5rem;
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+}
+
+// 52
+@media (max-width: 520px) {
+  html body .info .info-box .info-item {
+    width: 10rem;
+  }
+  html body .team .team-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// 440
+@media (max-width: 440px) {
+  // history
+  html body .history {
+    margin-top: 3.25rem;
+    .history-content {
+      padding: 15px;
+      top: 1.5rem;
+      box-shadow: -15px 15px 0px $peach;
+      max-height: 85%;
+      .history-content-subtitle {
+        font-size: 0.8rem;
+      }
+      .history-content-title {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+      }
+    }
+  }
+  html body .info .info-box .info-item {
+    width: 8rem;
+  }
+}

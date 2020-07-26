@@ -1,0 +1,88 @@
+@import "mixin";
+@import "var";
+@import "reset";
+
+html {
+  font-family: $p;
+  body {
+    @include nav;
+    // title
+    .form-title {
+      margin-top: 6.25rem;
+      text-align: center;
+      h3 {
+        font-size: 2.625rem;
+      }
+      .pagination {
+        margin-top: 2.5rem;
+      }
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .avtoriz {
+      &__box {
+        width: 80%;
+        margin: 3.125rem auto 9.125rem auto;
+        display: flex;
+        color: $grey;
+      }
+      &__column {
+        padding: 5.625rem 0 5.625rem 2rem;
+        margin: 0 15px;
+        flex: 0 1 50%;
+        border: 1px solid $border;
+      }
+      &__title {
+        h4 {
+          font-size: 1.5rem;
+          margin-bottom: 1.8rem;
+          color: $black;
+        }
+        p {
+          font-weight: 600;
+          width: 80%;
+          line-height: 1.2;
+          font-size: 14px;
+          margin-bottom: 15px;
+        }
+      }
+      &__label {
+        display: block;
+        color: $black;
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+      &__item {
+        margin-bottom: 1.5rem;
+      }
+      &__input {
+        padding: 10px;
+        width: 80%;
+        border: 1px solid $border;
+      }
+      &__btn {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        background-color: $black;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        border: 1px solid $black;
+        width: 60%;
+        padding: 1.5rem 0px;
+        &:hover {
+          background-color: $white;
+          color: $black;
+          border: 1px solid $black;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+    @include banner;
+    @include footer;
+  }
+}
+@import "media-accaunt";

@@ -1,0 +1,156 @@
+@import "reset";
+@import "mixin";
+@import "libs";
+@import "var";
+html {
+  font-family: $p;
+  font-size: 16px;
+  body {
+    @include nav;
+    // post
+    .post {
+      .post_img {
+        @include bg;
+        width: 100%;
+        height: 40rem;
+      }
+      .post_body {
+        margin-top: 3.125rem;
+        width: 80%;
+        color: $darkGrey;
+        .post_title {
+          color: #000;
+          font-size: 3rem;
+          margin-bottom: 3.125rem;
+        }
+        .post_inf {
+          display: flex;
+          margin-bottom: 2rem;
+          .post_date {
+            display: flex;
+            align-items: center;
+            svg {
+              margin-right: 5px;
+            }
+            margin-right: 10px;
+          }
+        }
+        .post_text {
+          line-height: 2;
+          text-indent: 1.5em; /* Отступ первой строки */
+          text-align: justify; /* Выравнивание по ширине */
+          .post_text__uppercase {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #000;
+          }
+        }
+        .post_share {
+          margin-top: 2rem;
+          display: flex;
+          align-items: center;
+          .post-share_text {
+            color: #000;
+            font-weight: 600;
+          }
+          .post-share_item {
+            margin-left: 1.875rem;
+            color: $darkGrey;
+          }
+          .post-share_item__twitter:hover {
+            color: #26a6d1;
+          }
+          .post-share_item__inst:hover {
+            color: #c376fa;
+          }
+          .post-share_item__facebook:hover {
+            color: #3b5998;
+          }
+          .post-share_item__vk:hover {
+            color: #597da3;
+          }
+        }
+      }
+    }
+    .comments {
+      width: 80%;
+      margin-top: 5rem;
+      display: grid;
+      grid-gap: 1.875rem;
+      grid-template-columns: 1fr 1fr;
+      &_title {
+        margin-bottom: 2.5em;
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+      &_rside {
+        .comments_item {
+          padding: 3.125rem 0px;
+          padding-left: 2rem;
+          border: 1px solid #e1e1e1;
+          width: 80%;
+          margin-bottom: 1.875rem;
+          .comments_name-item {
+            font-weight: 600;
+            margin-bottom: 1.875rem;
+          }
+          .comments_date-item {
+            color: $grey;
+            font-weight: 400;
+          }
+        }
+      }
+      &_lside {
+        .comment-form {
+          position: relative;
+          margin-top: 1.875rem;
+          &_label {
+            display: block;
+            margin-bottom: 10px;
+          }
+          &_input {
+            box-sizing: border-box;
+            padding: 10px;
+            width: 100%;
+          }
+          &_row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+          }
+          &_content {
+            margin-top: 30px;
+            width: 100%;
+            .comment-form_textarea {
+              box-sizing: border-box;
+              width: 100%;
+              height: 266px;
+              padding-left: 10px;
+              padding-top: 10px;
+              resize: none;
+            }
+          }
+          &_btn {
+            background-color: #000000;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 14px;
+            border: 1px solid #000;
+            width: 30%;
+            padding: 25px 0px;
+            margin-top: 40px;
+            &:hover {
+              background-color: #fff;
+              color: #000;
+              border: 1px solid #000;
+              transition: all 0.5s ease;
+            }
+          }
+        }
+      }
+    }
+    @include footer;
+  }
+}
+@import "megia-single-post";
